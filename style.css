@@ -1,0 +1,479 @@
+/* =====================================
+   ========     Css Reset   ============
+   ======================================== */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =====================================
+   ========    End Css Reset   ============
+   ======================================== */
+
+:root {
+  --clr-primary-Pink: hsl(322, 100%, 66%);
+  --clr-Neutral-Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --clr-Neutral-Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --clr-Neutral-Grayish-Blue: hsl(208, 11%, 55%);
+
+  --ff-open-sans: "Open Sans", sans-serif;
+  --ff-Poppins: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--ff-open-sans);
+}
+
+/* =====================   Typography   ======================= */
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-Poppins);
+  color: var(--clr-Neutral-Very-Dark-Cyan);
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+/* =====================   Buttons   ======================= */
+
+.cta {
+  font-family: var(--ff-open-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.main-header__btn {
+  background: #fff;
+  padding: 0.5em 2.5em;
+  border: none;
+  border-radius: 100px;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(49, 49, 49, 0.1);
+  box-shadow: 2px 2px 7px 0px rgba(49, 49, 49, 0.1);
+
+  transition: color 150ms linear;
+}
+
+.main-header__btn:hover,
+.main-header__btn:focus {
+  color: var(--clr-Neutral-Grayish-Blue);
+  cursor: pointer;
+}
+
+.hero-detail__btn,
+.card-build-community__btn {
+  background: var(--clr-primary-Pink);
+  color: var(--clr-Neutral-Very-Pale-Cyan);
+  border: none;
+  border-radius: 100px;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(255, 82, 191, 0.6);
+  box-shadow: 2px 2px 7px 0px rgba(255, 82, 191, 0.6);
+
+  transition: background 150ms linear;
+}
+
+.hero-detail__btn {
+  padding: 1em 5em;
+}
+
+.card-build-community__btn {
+  padding: 1em 4em;
+  font-size: 0.7rem;
+}
+
+.hero-detail__btn:hover,
+.hero-detail__btn:focus,
+.card-build-community__btn:hover,
+.card-build-community__btn:focus {
+  background: #ff86d2;
+  cursor: pointer;
+}
+
+/* =====================   Global   ======================= */
+
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
+header,
+main {
+  text-align: center;
+}
+
+.split {
+  display: flex;
+}
+
+/* =====================   Header   =========================== */
+
+header {
+  padding: 2rem 0;
+  background-color: var(--clr-Neutral-Very-Pale-Cyan);
+  background-image: url(./images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-header {
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.main-header__logo {
+  width: 150px;
+}
+
+.hero {
+  padding: 0 1rem;
+}
+
+.hero-detail > * + * {
+  margin-top: 1.7rem;
+}
+
+.hero-detail__subtitle {
+  color: var(--clr-Neutral-Very-Dark-Cyan);
+}
+
+.hero-img {
+  margin-top: 4rem;
+}
+
+/* =====================   Main   =========================== */
+main {
+  padding-top: 3.5rem;
+}
+
+.cards {
+  padding: 0 0.5rem;
+}
+.card {
+  background: #fff;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(49, 49, 49, 0.1);
+  box-shadow: 2px 2px 7px 0px rgba(49, 49, 49, 0.1);
+}
+
+.card-img {
+  margin-bottom: 3rem;
+}
+
+.card-detail__title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.card-detail__subtitle {
+  font-size: 1rem;
+  color: var(--clr-Neutral-Grayish-Blue);
+}
+
+.card-build-community {
+  max-width: 650px;
+  margin-inline: auto;
+  background: #fff;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(49, 49, 49, 0.1);
+  box-shadow: 2px 2px 7px 0px rgba(49, 49, 49, 0.1);
+
+  transform: translateY(70px);
+}
+
+.card-build-community__title {
+  font-size: 1.125rem;
+  margin-bottom: 1.3rem;
+}
+
+/* =====================   Footer   =========================== */
+
+footer {
+  background: var(--clr-Neutral-Very-Dark-Cyan);
+  color: var(--clr-Neutral-Very-Pale-Cyan);
+  padding: 10rem 0 3rem;
+}
+
+.footer-logo {
+  max-width: 170px;
+  margin-bottom: 2rem;
+}
+
+.footer-detail > * + * {
+  margin-top: 2.5rem;
+}
+
+.contact-info > * + * {
+  margin-top: 1rem;
+}
+
+.phone,
+.email,
+.location {
+  gap: 1rem;
+}
+
+.phone > ion-icon,
+.email > ion-icon,
+.location > ion-icon {
+  font-size: 1.4rem;
+}
+
+.phone > p,
+.email > p,
+.location > p {
+  font-size: 1rem;
+}
+
+.location {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.location-detail {
+  max-width: 270px;
+}
+
+.phone,
+.email {
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul > * + * {
+  margin-top: 1rem;
+}
+
+.secound-list {
+  margin-top: 0;
+}
+
+ul > li > a {
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: var(--clr-Neutral-Very-Pale-Cyan);
+}
+
+ul > li > a:hover,
+ul > li > a:focus {
+  text-decoration: underline;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+.social-icons > ion-icon {
+  font-size: 1.125rem;
+  color: var(--clr-Neutral-Very-Pale-Cyan);
+  border: 1px solid var(--clr-Neutral-Very-Pale-Cyan);
+  border-radius: 50%;
+  padding: 0.4rem;
+  margin-inline: 0.2rem;
+  transition: all 200ms linear;
+}
+
+.social-icons > ion-icon:hover,
+.social-icons > ion-icon:focus {
+  color: var(--clr-primary-Pink);
+  border-color: var(--clr-primary-Pink);
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ============================================
+============       Media Quaries    ===========
+================================================ */
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .split-at-media {
+    display: flex;
+    align-items: center;
+  }
+
+  /* =====================   Header   =========================== */
+  header {
+    background-image: url(./images/bg-hero-desktop.svg);
+  }
+  .hero {
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero-detail {
+    text-align: left;
+  }
+
+  .hero-detail__title {
+    font-size: 2.3rem;
+    max-width: 20ch;
+  }
+
+  .hero-detail__subtitle {
+    max-width: 70ch;
+  }
+
+  .hero-img {
+    margin-top: 0;
+  }
+
+  /* =====================   Main   =========================== */
+
+  .card {
+    max-width: 1200px;
+    margin-inline: auto;
+
+    justify-content: space-between;
+    gap: 8rem;
+    text-align: left;
+    padding: 2rem 2rem 2rem 5rem;
+  }
+
+  .card-img {
+    max-width: 400px;
+    margin-bottom: 0;
+  }
+
+  .card-detail__title {
+    font-size: 1.5rem;
+  }
+
+  .card-detail__subtitle {
+    max-width: 50ch;
+  }
+
+  .card-grow-together-img,
+  .card-your-users-img {
+    order: 2;
+  }
+
+  .card-build-community__title {
+    font-size: 1.6rem;
+  }
+
+  .card-build-community__btn {
+    padding: 1.1em 4.5em;
+    font-size: 0.9rem;
+  }
+
+  /* =====================   Footer   =========================== */
+  .footer-detail {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  ul > * + * {
+    margin-top: 0;
+  }
+
+  .first-list,
+  .secound-list {
+    margin: 0;
+  }
+
+  .first-list > * + *,
+  .secound-list > * + * {
+    margin-top: 1rem;
+  }
+
+  .social-icons {
+    margin: 0;
+  }
+
+  .copyright {
+    text-align: right;
+  }
+}
